@@ -6,10 +6,10 @@ export default Mixin.create({
   classNameBindings: ['isOk:has-success', 'isError:has-error'],
   disabled: false,
   readonly: false,
-  isError: computed('value.length', 'errors.[]', function() {
+  isError: computed('value.length', 'errors.[]', function() : boolean {
     return this.get('value.length') && (this.get('errors.length') > 0);
   }),
-  isOk: computed('value.length', 'isError', function() {
+  isOk: computed('value.length', 'isError', function() : boolean {
     return !this.get('isError') && (this.get('value.length') > 0);
   }),
   actions: {
