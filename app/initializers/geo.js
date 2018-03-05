@@ -1,11 +1,15 @@
+import { Promise } from 'rsvp';
+
 export function initialize(app) {
   const { geolocation } = navigator;
-  app.deferReadiness();
-  geolocation.getCurrentPosition(pos => {
-    let { coords: { latitude: lat, longitude: lng } } = pos;
-    app.register('data:location', { lat, lng }, { instantiate: false });
-    app.advanceReadiness();
-  });
+  let locPromise = new Promise((resolve) => {
+    geolocation.getCurrentPosition(pos => {
+      let { coords: { latitude: lat, longitude: lng } } = pos;
+      resolve({ lat, lng });
+    });
+  })
+  app.register('data:location', locPromise , { instantiate: false });
+  
 }
 
 export default {

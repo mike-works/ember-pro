@@ -4,6 +4,8 @@ import { getOwner } from '@ember/application';
 export default Controller.extend({
   init() {
     this._super(...arguments);
-    this.set('loc', getOwner(this).lookup('data:location'));
+    getOwner(this).lookup('data:location').then(loc => {
+      this.set('loc', loc );
+    })
   }
 });
