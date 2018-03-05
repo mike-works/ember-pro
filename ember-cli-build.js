@@ -2,6 +2,8 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const stew = require('broccoli-stew');
+const CommentPlugin = require('./broccoli/commenter');
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -13,5 +15,15 @@ module.exports = function(defaults) {
   
   app.import('vendor/math-shim.js');
   
-  return app.toTree();
+  function commentTree(tree) {
+    stew.debug(
+      new CommentPlugin(tree), { name: 'after' }
+    )
+  }
+
+  return commentTree(
+    stew.debug(
+      app.toTree(), { name: 'before' }
+    )
+  )
 };
