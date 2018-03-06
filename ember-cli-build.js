@@ -15,15 +15,11 @@ module.exports = function(defaults) {
   
   app.import('vendor/math-shim.js');
   
-  function commentTree(tree) {
-    stew.debug(
-      new CommentPlugin(tree), { name: 'after' }
-    )
-  }
+  // function commentTree(tree) {
+  //   stew.debug(
+  //     new CommentPlugin(tree), { name: 'after' }
+  //   )
+  // }
 
-  return commentTree(
-    stew.debug(
-      app.toTree(), { name: 'before' }
-    )
-  )
+  return app.toTree();
 };

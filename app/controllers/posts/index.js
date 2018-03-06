@@ -6,6 +6,7 @@ export default Controller.extend({
     this._super(...arguments);
     getOwner(this).lookup('data:location').then(loc => {
       this.set('loc', loc );
-    })
+    });
+    this.set('requestInfo', getOwner(this).lookup('data:request') );
   }
 });
