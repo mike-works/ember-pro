@@ -48,8 +48,12 @@
     No comments yet
   </p>
 {{/each}}
-{{x-textarea class='reply-field'}}
-
+{{x-textarea value=comment class='reply-field'}}
+{{#liquid-if comment.length class='char-count'}}
+<p class='char-count'>
+  character count: {{liquid-bind comment.length}}
+</p>
+{{/liquid-if}}
 <div class="post-actions">
   <button class='btn'>Reply</button>
 </div>
