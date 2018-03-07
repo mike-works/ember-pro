@@ -1,9 +1,12 @@
 <div class="posts-index">
   <div class="posts-left">
     <div class="posts-left-search">
+      
       <input
         class='posts-search-field'
         type='search'
+        value={{search}}
+        onkeyup={{action 'filterUpdated' value='target.value'}}
         placeholder='🔎 Search'/>
     </div>
     <div class="posts-left-content">

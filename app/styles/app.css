@@ -19,7 +19,7 @@ body {
 
 .posts-index .posts-left {
     background: #eee;
-    color: white;
+    color: #333;
     height: 100%;
     position: fixed;
     top: 54px;
