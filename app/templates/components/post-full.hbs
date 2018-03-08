@@ -42,7 +42,8 @@
 
 {{#each model.comments as |comment|}}
   {{post-comment
-    model=comment}}
+    model=comment
+    delete-comment=(action 'deleteComment' comment) }}
 {{else}}
   <p class="no-comments">
     No comments yet
@@ -55,5 +56,8 @@
 </p>
 {{/liquid-if}}
 <div class="post-actions">
-  <button class='btn'>Reply</button>
+  <button class='btn'
+    onClick={{action this.save-comment model postInfo}}>
+    Reply
+  </button>
 </div>
