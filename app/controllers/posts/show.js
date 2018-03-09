@@ -1,16 +1,14 @@
-import Controller from '@ember/controller';
+import Controller from "@ember/controller";
+import { task } from "ember-concurrency";
 
 export default Controller.extend({
-  actions: {
-    saveComment(post, draftObject) {
-      let newComment = this.store.createRecord('comment', {
-        post,
-        user: this.store.peekRecord('user', 1),
-        body: draftObject.get('comment')
-      });
-      newComment.save().then(() => {
-        draftObject.set('comment', '');
-      });
-    }
-  }
+  saveComment: task(function*(post, draftObject) {
+    let newComment = this.store.createRecord("comment", {
+      post,
+      user: this.store.peekRecord("user", 1),
+      body: draftObject.get("comment")
+    });
+    yield newComment.save()
+    draftObject.set("comment", "");
+  })
 });

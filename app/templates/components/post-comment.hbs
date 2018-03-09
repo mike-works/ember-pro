@@ -1,10 +1,28 @@
 <p class='comment-body'>
-  {{model.body}}
+  {{#if isEditing}}
+    {{x-textarea value=model.body disabled=saveEdit.isRunning}}
+    <button disabled={{saveEdit.isRunning}} onClick={{perform saveEdit}}>
+      Save
+    </button>
+    <button disabled={{not isWaiting}} onClick={{action 'cancelEdit'}}>
+      Cancel
+    </button>
+    {{#if isWaiting}}
+      Click cancel to abort!
+    {{/if}}
+  {{else}}
+    {{model.body}}
+  {{/if}}
 </p>
 
-<span class="delete-indicator"
+<button class="delete-indicator"
+      disabled={{disabled}}
       onClick={{this.delete-comment}}>
-</span>
+</button>
+<button class="edit-indicator"
+      disabled={{disabled}}
+      onClick={{action 'beginEdit'}}>
+</button>
 
 {{#if model.updatedAt}}
   <span class="posted-at">
