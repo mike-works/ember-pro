@@ -43,7 +43,7 @@
     "ember-load-initializers": "^1.0.0",
     "ember-moment": "7.5.0",
     "ember-network": "0.3.1",
-    "ember-resolver": "^4.0.0",
+    "ember-resolver": "^4.5.4",
     "ember-route-action-helper": "2.0.6",
     "ember-simple-auth": "1.4.2",
     "ember-source": "~2.17.0",
