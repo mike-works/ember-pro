@@ -19,7 +19,7 @@
   ],
   "devDependencies": {
     "babel-eslint": "^8.0.3",
-    "broccoli-asset-rev": "^2.4.5",
+    "broccoli-asset-rev": "^2.7.0",
     "broccoli-filter": "^1.2.4",
     "broccoli-stew": "^1.4.2",
     "ember-cli": "~2.17.1",
