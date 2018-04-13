@@ -18,7 +18,7 @@
     "showdown"
   ],
   "devDependencies": {
-    "babel-eslint": "^8.0.3",
+    "babel-eslint": "^8.2.3",
     "broccoli-asset-rev": "^2.4.5",
     "broccoli-filter": "^1.2.4",
     "broccoli-stew": "^1.4.2",
