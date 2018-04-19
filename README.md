@@ -10,6 +10,9 @@
 </p> 
 
 <p align='center'>
+  <a  href="https://greenkeeper.io/" title="Dependencies">
+    <img src="https://badges.greenkeeper.io/mike-works/ember-pro.svg"/>
+  </a>
   <a href="https://travis-ci.org/mike-works/ember-pro" title="Build Status">
     <img title="Build Status" src="https://travis-ci.org/mike-works/ember-pro.svg?branch=master"/>
   </a>
@@ -19,14 +22,16 @@
   <a href="https://docs.mike.works/ember-pro" title="Slides">
     <img title="Slides" src="https://img.shields.io/badge/mike.works-slides-blue.svg"/>
   </a>
-  <a title="Greenkeeper badge" href="https://greenkeeper.io/">
-    <img src="https://badges.greenkeeper.io/mike-works/ember-pro.svg"/>
-  </a>
 </p>
 <p align='center'>
 This is the  project used for the <a title="Mike.Works" href="https://mike.works">Mike.Works</a> <a title="Ember Pro" href="https://mike.works/course/ember-pro-16c648c">Ember Pro</a> course.
 </p>
 
+# Course outline and slides
+ * [View course outline here](https://mike.works/course/ember-pro-16c648c)
+ * [View slides here](https://docs.mike.works/ember-pro)
+ 
+# What are the pieces? 
 * The `master` branch represents the starting point for the course.
 * The `solution` branch represents the state of the project after all exercises are completed.
 * There are several git tags representing the state of the project after exercises are completed.
