@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- '6'
+- '8'
 sudo: false
 dist: trusty
 addons:
@@ -11,8 +11,13 @@ env:
   global:
   - JOBS=1
   - secure: 68DH9XR5dbMfW6+YaVg51Er9MaziazjuB8gQjsH+eO5XZx02AwipcMyvrRNzVMAelOacDjlG7iSnIj+Se70EFNiXfKkjbDfssSh+rzzb1VjvlVEb2yq7G3zFpAGC8ljhucehkt9r3OeFJUxneYuXQvos7rsvwSukExcqXbfGfHujmQ6Z9xo8TXApTk7qYyVvoGUHSIaFOe5t464lGNUxIs2fTp74vs2/hOsu/OVbMrHBWEsLhHf5l/D2Td0wRJPU9m7hGfLGv4EVSYUNnphWLDGcS5hID63C6B7FC9dXrrFICOcO/Lgf6YBmNi5T4TGQ65HEXjQUBibHFUizobCsd+TJFZzPgJlBorKW3kJ9qZvlIFyqo0JdoKMaHdJaJpfoajHf2GLrCJuorSNkumOmgh7XChRSC6MYnk5PluXmUrTpjBBoGJ+YNu03Z+ta4NKA9BpcefZ3EXfqAhztpyS4/iPL65ol7JA/mvN6xzC3yfOqwB0Fw69uVsdxI35923+LmHE5lM79qFW2jlDWczzudKTX5J8tgMJyeX4jyM+kgpabo1mEt2wHOn3CU7xxk3/9fyD4I6Kpr7XjUmK4R2QCrzL+8cxRw3mBp+RVzlrfqYCW6h/tlQQg/ddqoGLltygjKR/2t+7CyhCvWmw+abhVsQq0UJn3kjzsVgypG4WTZgc=
-before_script: greenkeeper-lockfile-update
+before_script: 
+  - sudo chmod 4755 /opt/google/chrome/chrome-sandbox
+  - sudo chown root /opt/google/chrome/chrome-sandbox
+  - greenkeeper-lockfile-update
+
 after_script: greenkeeper-lockfile-upload
+
 before_install:
 - yarn global add greenkeeper-lockfile@1
 - npm install -g bower
