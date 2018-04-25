@@ -1,9 +1,9 @@
-import Ember from 'ember';
-
-const { Helper, inject, observer } = Ember;
+import { inject as service } from '@ember/service';
+import Helper from '@ember/component/helper';
+import { observer } from '@ember/object';
 
 export default Helper.extend({
-  session: inject.service(),
+  session: service(),
   onAuthStateChanged: observer('session.isAuthenticated', function() {
     this.recompute();
   }),

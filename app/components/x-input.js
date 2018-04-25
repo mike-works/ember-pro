@@ -1,7 +1,5 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import TextField from '../mixins/text-field';
-
-const { Component } = Ember;
 
 export default Component.extend(TextField, {
   classNames: ['x-input'],

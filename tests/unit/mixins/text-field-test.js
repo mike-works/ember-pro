@@ -1,8 +1,6 @@
-import Ember from 'ember';
+import Obj from '@ember/object';
 import TextFieldMixin from 'commently/mixins/text-field';
 import { module, test } from 'qunit';
-
-const { Object: Obj } = Ember;
 
 module('Unit | Mixin | text field');
 

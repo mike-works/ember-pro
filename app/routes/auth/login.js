@@ -1,10 +1,14 @@
+import { inject as service } from '@ember/service';
+import Route from '@ember/routing/route';
 import Ember from 'ember';
 
-const { Route, inject, Logger } = Ember;
+const {
+  Logger
+} = Ember;
 
 export default Route.extend({
-  session: inject.service(),
-  currentUser: inject.service(),
+  session: service(),
+  currentUser: service(),
   actions: {
     login(email, password) {
       this.get('session')

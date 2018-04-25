@@ -1,6 +1,4 @@
-import Ember from 'ember';
-
-const { Helper } = Ember;
+import Helper from '@ember/component/helper';
 
 export function titleize([s = '']/* , hash*/) {
   return s[0].toUpperCase() + s.substring(1);
