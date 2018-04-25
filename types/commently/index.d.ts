@@ -8,3 +8,14 @@ declare global {
 
 export {};
 
+declare module '@ember-decorators/object' {
+  export function observes(...propertyNames: string[]): MethodDecorator;
+}
+
+declare module 'ember' {
+  namespace Ember {
+    interface Route<T = any> {
+      currentModel: T;
+    }
+  }
+}

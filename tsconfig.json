@@ -8,6 +8,7 @@
     "noEmitOnError": false,
     "noEmit": true,
     "inlineSourceMap": true,
+    "experimentalDecorators": true,
     "inlineSources": true,
     "baseUrl": ".",
     "module": "es6",

@@ -1,12 +1,14 @@
 import Route from '@ember/routing/route';
+import { action } from '@ember-decorators/object';
 
-export default Route.extend({
-  actions: {
-    register() {
-      this.get('currentModel').save();
-    }
-  },
+class RegisterRoute extends Route {
+  @action 
+  register(this: Route) {
+    this.get('currentModel').save();
+  }
   model() {
     return this.store.createRecord('user');
   }
-});
+}
+
+export default RegisterRoute;
