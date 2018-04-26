@@ -26,12 +26,19 @@ MyFilter.prototype.processString = function(existingString, pathName) {
 
 MyFilter.prototype.extensions = ["css", "js"];
 // MyFilter.prototype.targetExtension = "js";
-
 //////
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
-    // Add options here
+    'esw-cache-fallback': {
+      // RegExp patterns specifying which URLs to cache.
+      patterns: [
+        'https://commently-api-stage.herokuapp.com/api/(.+)'
+      ],
+
+      // changing this version number will bust the cache
+      version: '1'
+    }
   });
   app.import('./vendor/math-shim.js');
 
