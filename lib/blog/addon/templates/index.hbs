@@ -1,0 +1,9 @@
+You are home!
+
+{{link-to 'Author' 'author'}}
+
+{{#if user.current}}
+  <h4>{{user.current}}</h4>
+{{else}}
+  {{#link-to-external 'login'}}Login{{/link-to-external}}
+{{/if}}

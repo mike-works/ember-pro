@@ -1,0 +1,14 @@
+{
+  "name": "ui-kit",
+  "keywords": [
+    "ember-addon"
+  ],
+  "devDependencies": {
+    "ember-source": "*",
+    "ember-cli-typescript": "*"
+  },
+  "dependencies": {
+    "ember-cli-htmlbars": "*",
+    "ember-cli-babel": "*"
+  }
+}

@@ -5,8 +5,14 @@ class CurrentUserService extends Service {
   @service('store') store
 
   loadUserInfo(this: CurrentUserService) {
-    return this.get('store').peekRecord('user', 'current')
-    || this.get('store').findRecord('user', 'current');
+    let user = this.get('store').peekRecord('user', 'current');
+    if (!user) {
+      user = this.get('store').findRecord('user', 'current');
+      user.then(u => {
+        this.set('current', u);
+      })
+    }
+    return user;
   }
 }
 

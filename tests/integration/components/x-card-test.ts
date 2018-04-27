@@ -10,7 +10,9 @@ module('Integration | Component | x-card', function(hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`{{#x-card title='Foo' as |api|}}
+    await render(hbs`
+    {{#x-card
+        title='Foo' as |api|}}
       <p class='title'> {{api.title}}  </p>
     {{/x-card}}`);
 

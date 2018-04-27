@@ -17,16 +17,32 @@
         "tests/*"
       ],
       "commently/*": [
-        "app/*"
+        "app/*",
+        "lib/ui-kit/app/*",
+        "lib/commenter/app/*"
       ],
       "*": [
         "types/*"
+      ],
+      "ui-kit": [
+        "lib/ui-kit/addon"
+      ],
+      "ui-kit/*": [
+        "lib/ui-kit/addon/*"
+      ],
+      "commenter": [
+        "lib/commenter/addon"
+      ],
+      "commenter/*": [
+        "lib/commenter/addon/*"
       ]
     }
   },
   "include": [
     "app",
     "tests",
-    "types"
+    "types",
+    "lib/ui-kit",
+    "lib/commenter"
   ]
 }

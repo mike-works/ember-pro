@@ -9,7 +9,19 @@ console.log('4^.5 = ', math.sqrt(4));
 const App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver
+  Resolver,
+  engines: {
+    blog: {
+      dependencies: {
+        externalRoutes: {
+          login: "auth.login"
+        },
+        services: [
+          {'user': 'current-user'}
+        ]
+      }
+    }
+  }
 });
 
 loadInitializers(App, config.modulePrefix);

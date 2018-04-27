@@ -16,6 +16,11 @@ MyRouter.map(function() {
     this.route("login");
     this.route("register");
   });
+
+  this.mount('blog');
+  // this.mount('blog', {path: 'marketing-blog'});
+  // this.mount('blog', {path: 'exec-blog'});
+  // this.mount('blog', {path: 'engineering-blog'});
 });
 
 export default MyRouter;

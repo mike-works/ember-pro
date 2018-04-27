@@ -1,0 +1,9 @@
+{
+  "name": "commenter",
+  "keywords": [
+    "ember-addon"
+  ],
+  "devDependencies": {
+    "ember-cli-typescript": "*"
+  }
+}
