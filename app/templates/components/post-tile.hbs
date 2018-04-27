@@ -10,6 +10,11 @@
     <span class="author-name">
       {{model.authorName}}
     </span>
+    {{#if commentDraft.body}}
+    <span class="draft-indicator">
+      DRAFT
+    </span>
+    {{/if}}
     <span class="created-at pull-right">
       {{moment-format model.createdAt "LL"}}
     </span>

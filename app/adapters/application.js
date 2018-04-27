@@ -6,7 +6,26 @@ const { JSONAPIAdapter } = DS;
 const { host, namespace } = config.DS;
 
 export default JSONAPIAdapter.extend(DataAdapterMixin, {
-  authorizer: 'authorizer:oauth2',
+  authorizer: "authorizer:oauth2",
   host,
-  namespace
+  namespace,
+  urlForDeleteRecord(id, modelName, snapshot) {
+    // /api/posts/:post_id/  << delete
+    //     comments/:comment_id
+    switch (modelName) {
+      case 'comment':
+        return `${this.urlForDeleteRecord(snapshot.belongsTo("post").id, 'post', null)}/comments/${id}`;
+      default: return this._super(...arguments);
+    }
+  },
+  urlForCreateRecord(modelName, snapshot) {
+    // /api/posts/:post_id/  << find
+    //     comments
+    switch (modelName) {
+      case 'comment':
+        return `${this.urlForFindRecord(snapshot.belongsTo("post").id, 'post', null)}/comments`;
+      default: return this._super(...arguments);
+    }
+  }
+
 });
