@@ -1,0 +1,16 @@
+{{outlet}}
+
+{{#x-card
+  title='Settings' as |api|}}
+  {{#x-simple-card cardApi=api as |simpleApi|}}
+    I'm inside the <b>component</b>
+    <em>{{api.b}}</em>
+
+    <button onClick={{api.actions.toggleTitle}}>
+      hide title
+    </button>
+
+    {{simpleApi.ui.footer}}
+
+  {{/x-simple-card}}
+{{/x-card}}

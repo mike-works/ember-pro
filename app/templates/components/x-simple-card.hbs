@@ -1,0 +1,8 @@
+<h4>{{cardApi.title}}</h4>
+<div class="body">
+   {{yield (hash
+    ui=(hash
+      footer=(component '-x-card-footer' title=cardApi.title)
+    )
+   )}}
+</div>

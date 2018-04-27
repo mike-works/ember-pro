@@ -7,6 +7,7 @@ const MyRouter = Router.extend({
 });
 
 MyRouter.map(function() {
+  this.route("styleguide");
   this.route("posts", function() {
     this.route("show", { path: ":id" });
   });

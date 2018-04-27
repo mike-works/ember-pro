@@ -9,6 +9,8 @@ module.exports = function(environment) {
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
+        'ember-glimmer-named-arguments': true,
+        'ember-metal-es5-getters': true
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       },
