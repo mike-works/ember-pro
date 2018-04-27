@@ -1,9 +1,27 @@
 <p class='comment-body'>
-  {{model.body}}
+  {{#if isEditing}}
+    {{x-textarea value=model.body}}
+    <button onClick={{action (mut isEditing) false}}>
+      Cancel
+    </button>
+    <button onClick={{perform updateComment model}}>
+      Update
+    </button>
+    {{#if isUpdateCancellable}}
+      <button onClick={{action 'cancelUpdate'}}>
+        Abort update!
+      </button>
+    {{/if}}
+  {{else}}
+    {{model.body}}
+  {{/if}}
 </p>
 
 <span class="delete-indicator"
       onClick={{delete-comment}}>
+</span>
+<span class="edit-indicator"
+      onClick={{action (mut isEditing) true}}>
 </span>
 
 {{#if model.updatedAt}}

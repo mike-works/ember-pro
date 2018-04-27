@@ -18,6 +18,15 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
       default: return this._super(...arguments);
     }
   },
+  urlForUpdateRecord(id, modelName, snapshot) {
+    // /api/posts/:post_id/  << update
+    //     comments/:comment_id
+    switch (modelName) {
+      case 'comment':
+        return `${this.urlForUpdateRecord(snapshot.belongsTo("post").id, 'post', null)}/comments/${id}`;
+      default: return this._super(...arguments);
+    }
+  },
   urlForCreateRecord(modelName, snapshot) {
     // /api/posts/:post_id/  << find
     //     comments

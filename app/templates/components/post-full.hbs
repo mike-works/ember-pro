@@ -51,9 +51,12 @@
     No comments yet
   </p>
 {{/each}}
-{{x-textarea value=commentDraft.body class='reply-field'}}
-
+{{x-textarea
+  disabled=saveCommentTask.isRunning
+  value=commentDraft.body
+  class='reply-field'}}
 <div class="post-actions">
   <button class='btn'
-    onClick={{action save-comment model commentDraft}}>Reply</button>
+    disabled={{saveCommentTask.isRunning}}
+    onClick={{perform saveCommentTask model commentDraft}}>Reply</button>
 </div>

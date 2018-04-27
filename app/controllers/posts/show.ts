@@ -1,19 +1,21 @@
 import Controller from '@ember/controller';
+import { task } from 'ember-concurrency';
 
 export default class PostsShow extends Controller.extend({
   // anything which *must* be merged to prototype here
-  actions: {
-    saveComment(post, commentDraft) {
-      let newComment = this.store.createRecord('comment', {
-        body: commentDraft.get('body'),
-        post,
-        user: this.store.peekRecord('user', 1)
-      });
-      newComment.save().then(savedComment => {
-        commentDraft.set('body', '');
-      });
-    }
-  }
+  saveCommentTask: task(function* saveCommentGenerator(this: any, post, commentDraft) {
+    let newComment = this.store.createRecord('comment', {
+      body: commentDraft.get('body'),
+      post,
+      user: this.store.peekRecord('user', 1)
+    });
+    let savedComment = yield newComment.save();
+    commentDraft.set('body', '');  
+  })
+  // actions: {
+  //   saveComment(post, commentDraft) {
+  //   }
+  // }
 }) {
   // normal class body definition here
 }
