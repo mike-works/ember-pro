@@ -14,3 +14,11 @@
 
   {{/x-simple-card}}
 {{/x-card}}
+
+
+{{#x-modal isOpen=modalOpen opts=modalOps}}
+  <p>Body</p>
+  <button>Click Me</button>
+{{/x-modal}}
+
+<button onClick={{action (mut modalOpen) true }}>Open My Modal</button>
