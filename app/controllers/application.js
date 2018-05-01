@@ -7,7 +7,9 @@ export default Controller.extend({
   init() {
     this._super(...arguments);
     let container = getOwner(this);
-    let loc = container.lookup('data:location');
-    this.set('loc', loc);
+    let locPromise = container.lookup('data:location');
+    locPromise.then(loc => {
+      this.set('loc', loc);
+    });
   }
 });
