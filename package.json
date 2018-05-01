@@ -41,9 +41,9 @@
     "ember-data": "~3.1.1",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
+    "ember-maybe-import-regenerator": "^0.1.6",
     "ember-moment": "7.5.0",
     "ember-network": "0.3.1",
-    "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^4.0.0",
     "ember-route-action-helper": "2.0.6",
     "ember-simple-auth": "1.4.2",
@@ -62,5 +62,8 @@
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@types/ember": "^2.8.22"
+  }
 }

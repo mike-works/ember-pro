@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitThis": true,
+    "noEmitOnError": false,
+    "noEmit": true,
+    "inlineSourceMap": true,
+    "experimentalDecorators": true,
+    "inlineSources": true,
+    "baseUrl": ".",
+    "module": "es6",
+    "paths": {
+      "commently/tests/*": ["tests/*"],
+      "commently/*": ["app/*"],
+      "*": ["types/*"]
+    }
+  },
+  "include": ["app", "tests", "types"]
+}
