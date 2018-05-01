@@ -2,6 +2,28 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const Filter = require('broccoli-filter');
+const stew = require('broccoli-stew');
+
+function Commenter(inputNode) {
+  Filter.call(this, inputNode);
+}
+
+Commenter.prototype = Object.create(Filter.prototype);
+
+Commenter.prototype.processString = function(existingString, pth) {
+  let d = new Date();
+  return `/**
+* ${pth}
+*
+* (c) ${d.getFullYear()} 🦄🦄🦄🔫🌈🍺🍺 All Rights Reserved
+* generated at: ${d.toISOString()}
+*/
+${existingString}
+`;
+};
+
+Commenter.prototype.extensions = ["css", "js"];
 
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
@@ -20,6 +42,6 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
-
-  return app.toTree();
+  // @ts-ignore
+  return new Commenter(app.toTree());
 };
