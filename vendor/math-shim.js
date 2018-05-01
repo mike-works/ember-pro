@@ -1,3 +1,4 @@
+/* global define: true */
 define('math', [], function() {
   // top-level module scope
   return {
