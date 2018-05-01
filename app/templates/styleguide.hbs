@@ -1,0 +1,10 @@
+{{outlet}}
+
+{{#x-card title='My Card' as |api|}}
+  {{#api.ui.header as |ct|}}
+    💡 We have {{ct}} ideas!
+  {{/api.ui.header}}
+  {{#api.ui.simple as |simple|}}
+    <em>This is in the block: {{simple.countVal}}</em>
+  {{/api.ui.simple}}
+{{/x-card}}

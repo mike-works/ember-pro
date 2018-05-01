@@ -1,0 +1,17 @@
+ {{yield (hash
+  actions=(hash
+    increment=(action (mut _count) (add _count 1))
+    decrement=(action (mut _count) (add _count -1))
+  )
+  countVal=_count
+  ui=(hash
+    header=(component '-x-card-header' _count=_count) 
+    simple=(component '-x-simple-card' api=(hash
+      actions=(hash
+        increment=(action (mut _count) (add _count 1))
+        decrement=(action (mut _count) (add _count -1))
+      )
+      countVal=_count)
+    )
+  )
+)}}
