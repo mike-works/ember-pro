@@ -18,7 +18,22 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
           this.urlForFindRecord(postId, "post", post),
           "comments",
           id
-        ].join('/');
+        ].join("/");
+      }
+      default:
+        return this._super(...arguments);
+    }
+  },
+  urlForUpdateRecord(id, modelName, snapshot) {
+    switch (modelName) {
+      case "comment": {
+        let post = snapshot.belongsTo("post");
+        let postId = post.id;
+        return [
+          this.urlForFindRecord(postId, "post", post),
+          "comments",
+          id
+        ].join("/");
       }
       default:
         return this._super(...arguments);
@@ -29,10 +44,9 @@ export default JSONAPIAdapter.extend(DataAdapterMixin, {
       case "comment": {
         let post = snapshot.belongsTo("post");
         let postId = post.id;
-        return [
-          this.urlForFindRecord(postId, "post", post),
-          "comments"
-        ].join('/');
+        return [this.urlForFindRecord(postId, "post", post), "comments"].join(
+          "/"
+        );
       }
       default:
         return this._super(...arguments);

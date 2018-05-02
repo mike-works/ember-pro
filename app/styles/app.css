@@ -36,7 +36,7 @@ body {
 /** POSTS-LEFT **/
 
 .posts-left {
-    width: 370px;
+    width: 200px;
     float: left;
 }
 
@@ -66,7 +66,7 @@ body {
 /** POSTS-RIGHT **/
 
 .posts-right {
-    left: 371px;
+    left: 201px;
     width: calc(100%-370px);
     right: 0;
 }
