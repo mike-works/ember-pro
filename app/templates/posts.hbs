@@ -1,10 +1,16 @@
 <div class="posts-index">
   <div class="posts-left">
     <div class="posts-left-search">
+
       <input
         class='posts-search-field'
         type='search'
-        placeholder='🔎 Search'/>
+        placeholder='🔎 Search'
+        value={{search}}
+        onInput={{action 'searchUpdated' value='target.value'}}
+        />
+
+
     </div>
     <div class="posts-left-content">
       <div class="posts-left-content-pane">
