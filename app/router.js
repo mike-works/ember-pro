@@ -16,6 +16,15 @@ Router.map(function() {
     this.route('register');
   });
   this.route('styleguide');
+  this.mount('articles', {
+    as: 'hr-articles'
+  });
+  this.mount('articles', {
+    as: 'eng-articles'
+  });
+  this.mount('articles', {
+    as: 'exec-articles'
+  });
 });
 
 export default Router;

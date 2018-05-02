@@ -10,7 +10,14 @@ console.log(PI) // 3.145926...
 const App = Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-  Resolver
+  Resolver,
+  engines: {
+    'hr-articles': {
+      dependencies: {
+        services: [{ info: "hr-info" }]
+      }
+    }
+  }
 });
 
 loadInitializers(App, config.modulePrefix);
