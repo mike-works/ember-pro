@@ -54,7 +54,7 @@
     "eslint-plugin-ember": "^5.0.0",
     "eslint-plugin-promise": "^3.4.0",
     "greenkeeper-lockfile": "^1.12.0",
-    "liquid-fire": "~0.29.1",
+    "liquid-fire": "~0.29.5",
     "loader.js": "^4.2.3",
     "semver": "^5.5.1",
     "showdown": "1.8.6"
