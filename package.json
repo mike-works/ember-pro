@@ -52,7 +52,7 @@
     "ember-truth-helpers": "2.1.0",
     "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-ember": "^5.2.0",
-    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-promise": "^4.0.1",
     "greenkeeper-lockfile": "^1.15.1",
     "liquid-fire": "~0.29.5",
     "loader.js": "^4.7.0",
