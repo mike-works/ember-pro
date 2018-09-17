@@ -2800,9 +2800,9 @@ ember-cli-shims@^1.2.0:
     ember-rfc176-data "^0.3.1"
     silent-error "^1.0.1"
 
-ember-cli-showdown@^4.1.1:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-showdown/-/ember-cli-showdown-4.3.0.tgz#5efeb171c346f20a8a479d3e4b4536ad4f355790"
+ember-cli-showdown@^4.4.4:
+  version "4.4.4"
+  resolved "https://registry.yarnpkg.com/ember-cli-showdown/-/ember-cli-showdown-4.4.4.tgz#daf666369b1f35843dc5dc55a94da058e63f59c4"
   dependencies:
     broccoli-funnel "^2.0.0"
     broccoli-source "^1.1.0"
@@ -2810,7 +2810,9 @@ ember-cli-showdown@^4.1.1:
     ember-cli-babel "^6.8.1"
     ember-cli-htmlbars "^2.0.3"
     ember-cli-import-polyfill "^0.2.0"
+    ember-cli-version-checker "^2.1.2"
     ember-getowner-polyfill "^2.0.1"
+    resolve "^1.8.1"
     semver "^5.5.0"
     showdown "^1.7.4"
 
