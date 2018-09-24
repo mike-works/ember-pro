@@ -21,7 +21,7 @@
     "babel-eslint": "^9.0.0",
     "broccoli-asset-rev": "^3.0.0",
     "broccoli-filter": "^1.2.4",
-    "broccoli-stew": "^1.4.2",
+    "broccoli-stew": "^2.0.0",
     "ember-cli": "~3.3.0",
     "ember-cli-app-version": "^3.2.0",
     "ember-cli-babel": "^6.16.0",
