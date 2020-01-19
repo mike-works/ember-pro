@@ -46,7 +46,7 @@
     "ember-moment": "7.8.1",
     "ember-network": "0.3.1",
     "ember-resolver": "7.0.0",
-    "ember-route-action-helper": "2.0.7",
+    "ember-route-action-helper": "2.0.8",
     "ember-simple-auth": "1.9.2",
     "ember-source": "3.15.0",
     "ember-state-services": "4.2.0",
