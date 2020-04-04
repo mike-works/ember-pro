@@ -58,7 +58,7 @@
     "liquid-fire": "0.31.0",
     "loader.js": "4.7.0",
     "semver": "6.2.0",
-    "showdown": "1.9.0"
+    "showdown": "1.9.1"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
