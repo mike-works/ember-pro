@@ -13121,10 +13121,10 @@ linkify-it@^3.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-liquid-fire@0.34.0:
-  version "0.34.0"
-  resolved "https://registry.yarnpkg.com/liquid-fire/-/liquid-fire-0.34.0.tgz#3522b444a4ae3f2fb824cc6c483e04fc5bba2d94"
-  integrity sha512-IppYBxIUhv00+Hi2Lno9kG4pcBUHVJD2ROQA7o9r0bLuLDfXTG94C8m6dwfYlswQBGdJAuN6a9ItLxftj8DgSw==
+liquid-fire@0.35.0:
+  version "0.35.0"
+  resolved "https://registry.yarnpkg.com/liquid-fire/-/liquid-fire-0.35.0.tgz#d74080aa49c628dae67232eadd78e4d216ab55b7"
+  integrity sha512-gmL9AzaGUgM5tSg1/NZxIooEKt3Spaka9w7ugPi/3Li1cxsdI1l1n8G3NdaJT6cWxU9TxZ30ZJFmxp59onQRyQ==
   dependencies:
     "@embroider/macros" "^1.0.0"
     broccoli-funnel "^3.0.8"
