@@ -57,7 +57,7 @@
     "greenkeeper-lockfile": "1.15.1",
     "liquid-fire": "0.35.0",
     "loader.js": "4.7.0",
-    "semver": "6.3.0",
+    "semver": "7.5.2",
     "showdown": "1.9.1"
   },
   "engines": {
