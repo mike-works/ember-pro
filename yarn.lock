@@ -13458,10 +13458,10 @@ linkify-it@^4.0.1:
   dependencies:
     uc.micro "^1.0.1"
 
-liquid-fire@0.36.1:
-  version "0.36.1"
-  resolved "https://registry.yarnpkg.com/liquid-fire/-/liquid-fire-0.36.1.tgz#2657f530155b04ee042f3556f75a219e2898eedc"
-  integrity sha512-kicEAmOngPuC94R279u61JpV1UkBvkS7WJqwOXh6SGMeuu6G43DAVBhI480v883uRsFAgwxkrSMhSMxd/t4sYw==
+liquid-fire@0.36.2:
+  version "0.36.2"
+  resolved "https://registry.yarnpkg.com/liquid-fire/-/liquid-fire-0.36.2.tgz#b5a49744420a36467ed2b483defdb3145bb6c0da"
+  integrity sha512-pa31ZZOTxaa/gpF3Klk9ZOJGBFVmho13+ze+ygI1r4Sha9oRz2+zECBZpLYkl3COGF4yffl4jTo4poK77FhQwA==
   dependencies:
     "@ember/render-modifiers" "^2.1.0"
     "@embroider/addon-shim" "^1.8.6"
